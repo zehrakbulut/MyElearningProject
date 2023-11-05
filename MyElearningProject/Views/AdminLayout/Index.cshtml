@@ -1,0 +1,25 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+@Html.Action("PartialHead","AdminLayout")
+<body class="fix-header fix-sidebar card-no-border">
+    @Html.Action("PartialPreloader","AdminLayout")
+    <div id="main-wrapper">
+        @Html.Action("PartialNavbar","AdminLayout")
+        @Html.Action("PartialSidebar","AdminLayout")
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                @Html.Action("PartialPageRowTitle","AdminLayout")
+
+                @RenderBody()
+
+            </div>
+            @Html.Action("PartialFooter","AdminLayout")
+        </div>
+    </div>
+    @Html.Action("PartialScript","AdminLayout")
+</body>
+</html>

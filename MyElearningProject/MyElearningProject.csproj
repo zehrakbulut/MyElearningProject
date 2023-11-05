@@ -1,0 +1,936 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7397B7A4-4C54-446D-8414-1A7FB736A48E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MyElearningProject</RootNamespace>
+    <AssemblyName>MyElearningProject</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44379</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AdminLayoutController.cs" />
+    <Compile Include="Controllers\CategoryController.cs" />
+    <Compile Include="Controllers\CourseController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\InstructorAnalysisController.cs" />
+    <Compile Include="Controllers\InstructorController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Controllers\ProfileController.cs" />
+    <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="DAL\Context\ELearningContext.cs" />
+    <Compile Include="DAL\Entities\Category.cs" />
+    <Compile Include="DAL\Entities\Comment.cs" />
+    <Compile Include="DAL\Entities\Course.cs" />
+    <Compile Include="DAL\Entities\CourseRegister.cs" />
+    <Compile Include="DAL\Entities\Instructor.cs" />
+    <Compile Include="DAL\Entities\Process.cs" />
+    <Compile Include="DAL\Entities\Review.cs" />
+    <Compile Include="DAL\Entities\Student.cs" />
+    <Compile Include="DAL\Entities\Testimonial.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311041723188_mig_add_columns.cs" />
+    <Compile Include="Migrations\202311041723188_mig_add_columns.designer.cs">
+      <DependentUpon>202311041723188_mig_add_columns.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311041737455_mig_add_comment.cs" />
+    <Compile Include="Migrations\202311041737455_mig_add_comment.designer.cs">
+      <DependentUpon>202311041737455_mig_add_comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311041746073_mig_add_relations_comment.cs" />
+    <Compile Include="Migrations\202311041746073_mig_add_relations_comment.designer.cs">
+      <DependentUpon>202311041746073_mig_add_relations_comment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311041748428_mig_add_commentupdate.cs" />
+    <Compile Include="Migrations\202311041748428_mig_add_commentupdate.designer.cs">
+      <DependentUpon>202311041748428_mig_add_commentupdate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311042015337_mig_add_review.cs" />
+    <Compile Include="Migrations\202311042015337_mig_add_review.designer.cs">
+      <DependentUpon>202311042015337_mig_add_review.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311050844225_mig_add_process.cs" />
+    <Compile Include="Migrations\202311050844225_mig_add_process.designer.cs">
+      <DependentUpon>202311050844225_mig_add_process.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Templates\material-lite-master\assets\images\background\profile-bg.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\big\img1.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\big\img2.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\big\img3.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\big\img4.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\big\img5.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\big\img6.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\custom-select.png" />
+    <Content Include="Templates\material-lite-master\assets\images\favicon.png" />
+    <Content Include="Templates\material-lite-master\assets\images\logo-light-icon.png" />
+    <Content Include="Templates\material-lite-master\assets\images\logo-light-text.png" />
+    <Content Include="Templates\material-lite-master\assets\images\users\1.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\2.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\3.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\4.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\5.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\6.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\7.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\8.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\d1.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\d2.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\d3.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\d4.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\d5.jpg" />
+    <Content Include="Templates\material-lite-master\assets\images\users\profile.png" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\css\bootstrap.css" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\js\bootstrap.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\js\tether.min.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\c3-master\c3.min.css" />
+    <Content Include="Templates\material-lite-master\assets\plugins\c3-master\c3.min.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-js\dist\chartist-init.css" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-js\dist\chartist-init.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-js\dist\chartist.css" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-js\dist\chartist.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-js\dist\chartist.min.css" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-js\dist\chartist.min.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.css" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.min.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\Gruntfile.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\src\css\chartist-plugin-tooltip.css" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\src\scripts\chartist-plugin-tooltip.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\tasks\clean.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\tasks\copy.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\tasks\jasmine.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\tasks\jshint.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\tasks\sass.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\tasks\uglify.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\tasks\umd.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\test\runner.html" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\test\spec\spec-tooltip.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\d3\d3.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\d3\d3.min-v4.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\d3\d3.min.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\gmaps.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\gmaps.min.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\jquery.gmaps.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.controls.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.core.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.events.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.geofences.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.geometry.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.layers.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.map_types.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.markers.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.native_extensions.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.overlays.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.routes.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.static.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.streetview.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.styles.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\lib\gmaps.utils.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\jquery\jquery.min.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\sticky-kit-master\dist\sticky-kit.js" />
+    <Content Include="Templates\material-lite-master\assets\plugins\sticky-kit-master\dist\sticky-kit.min.js" />
+    <Content Include="Templates\material-lite-master\css\animate.css" />
+    <Content Include="Templates\material-lite-master\css\colors\blue.css" />
+    <Content Include="Templates\material-lite-master\css\spinners.css" />
+    <Content Include="Templates\material-lite-master\css\style.css" />
+    <Content Include="Templates\material-lite-master\icon-material.html" />
+    <Content Include="Templates\material-lite-master\index.html" />
+    <Content Include="Templates\material-lite-master\js\custom.js" />
+    <Content Include="Templates\material-lite-master\js\custom.min.js" />
+    <Content Include="Templates\material-lite-master\js\dashboard1.js" />
+    <Content Include="Templates\material-lite-master\js\jquery.slimscroll.js" />
+    <Content Include="Templates\material-lite-master\js\sidebarmenu.js" />
+    <Content Include="Templates\material-lite-master\js\waves.js" />
+    <Content Include="Templates\material-lite-master\map-google.html" />
+    <Content Include="Templates\material-lite-master\pages-blank.html" />
+    <Content Include="Templates\material-lite-master\pages-error-404.html" />
+    <Content Include="Templates\material-lite-master\pages-profile.html" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flag-icon.min.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ad.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ae.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\af.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ag.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ai.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\al.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\am.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ao.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\aq.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ar.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\as.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\at.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\au.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\aw.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ax.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\az.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ba.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bb.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bd.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\be.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bf.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bg.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bh.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bi.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bj.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bl.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bm.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bn.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bo.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bq.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\br.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bs.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bt.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bv.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bw.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\by.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\bz.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ca.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cc.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cd.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cf.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cg.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ch.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ci.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ck.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cl.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cm.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cn.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\co.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cr.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cu.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cv.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cw.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cx.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cy.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\cz.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\de.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\dj.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\dk.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\dm.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\do.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\dz.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ec.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ee.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\eg.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\eh.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\er.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\es.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\et.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\fi.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\fj.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\fk.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\fm.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\fo.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\fr.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ga.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gb.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gd.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ge.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gf.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gg.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gh.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gi.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gl.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gm.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gn.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gp.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gq.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gr.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gs.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gt.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gu.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gw.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\gy.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\hk.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\hm.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\hn.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\hr.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ht.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\hu.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\id.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ie.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\il.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\im.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\in.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\io.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\iq.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ir.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\is.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\it.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\je.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\jm.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\jo.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\jp.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ke.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\kg.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\kh.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ki.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\km.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\kn.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\kp.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\kr.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\kw.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ky.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\kz.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\la.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\lb.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\lc.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\li.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\lk.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\lr.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ls.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\lt.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\lu.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\lv.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ly.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ma.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mc.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\md.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\me.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mf.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mg.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mh.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mk.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ml.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mm.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mn.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mo.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mp.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mq.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mr.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ms.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mt.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mu.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mv.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mw.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mx.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\my.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\mz.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\na.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\nc.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ne.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\nf.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ng.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ni.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\nl.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\no.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\np.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\nr.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\nu.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\nz.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\om.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\pa.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\pe.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\pf.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\pg.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ph.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\pk.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\pl.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\pm.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\pn.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\pr.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ps.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\pt.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\pw.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\py.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\qa.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\re.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ro.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\rs.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ru.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\rw.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sa.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sb.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sc.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sd.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\se.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sg.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sh.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\si.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sj.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sk.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sl.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sm.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sn.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\so.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sr.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ss.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\st.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sv.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sx.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sy.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\sz.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tc.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\td.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tf.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tg.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\th.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tj.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tk.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tl.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tm.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tn.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\to.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tr.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tt.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tv.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tw.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\tz.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ua.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ug.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\um.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\us.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\uy.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\uz.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\va.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\vc.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ve.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\vg.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\vi.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\vn.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\vu.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\wf.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ws.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\ye.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\yt.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\za.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\zm.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\flag-icon-css\flags\zw.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\css\font-awesome.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\css\font-awesome.min.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\css\font-awesome.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\css\font-awesome.min.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\fonts\fontawesome-webfont.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\HELP-US-OUT.txt" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-arrows-10.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-basic-10.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-ecommerce-10.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-music-10.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-software-10.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-weather-10.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\linea.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\css\material-design-iconic-font.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\css\material-design-iconic-font.min.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\css\materialdesignicons.min.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\simple-line-icons\css\simple-line-icons.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\themify-icons\fonts\themify.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\themify-icons\ie7\ie7.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\themify-icons\ie7\ie7.js" />
+    <Content Include="Templates\material-lite-master\scss\icons\themify-icons\themify-icons.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\css\weather-icons-core.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\css\weather-icons-variables.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\css\weather-icons-wind.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\css\weather-icons-wind.min.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\css\weather-icons.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\css\weather-icons.min.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\fonts\weathericons-regular-webfont.svg" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-beaufort.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-day.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-direction.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-misc.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-moon.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-neutral.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-night.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-time.css" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-wind-names.css" />
+    <Content Include="Templates\material-lite-master\table-basic.html" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Templates\material-lite-master\.gitattributes" />
+    <Content Include="Templates\material-lite-master\assets\images\big\Thumbs.db" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Templates\material-lite-master\assets\plugins\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-js\dist\chartist.css.map" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-js\dist\chartist.min.js.map" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-js\dist\scss\chartist.scss" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-js\dist\scss\settings\_chartist-settings.scss" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\.gitignore" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\bower.json" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\CHANGELOG.md" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.css.map" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\dist\chartist-plugin-tooltip.min.js.map" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\dist\LICENSE" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\LICENSE" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\package.json" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\README.md" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\src\css\chartist-plugin-tooltip.css.map" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\src\scss\chartist-plugin-tooltip.scss" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\tasks\aliases.yml" />
+    <Content Include="Templates\material-lite-master\assets\plugins\chartist-plugin-tooltip-master\test\.jshintrc" />
+    <Content Include="Templates\material-lite-master\assets\plugins\d3\API.md" />
+    <Content Include="Templates\material-lite-master\assets\plugins\d3\CHANGES.md" />
+    <Content Include="Templates\material-lite-master\assets\plugins\d3\LICENSE" />
+    <Content Include="Templates\material-lite-master\assets\plugins\d3\README.md" />
+    <Content Include="Templates\material-lite-master\assets\plugins\gmaps\gmaps.min.js.map" />
+    <Content Include="Templates\material-lite-master\scss\app.scss" />
+    <Content Include="Templates\material-lite-master\scss\colors\blue.scss" />
+    <Content Include="Templates\material-lite-master\scss\grid.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\animated.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\bordered-pulled.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\core.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\fixed-width.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\font-awesome.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\icons.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\larger.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\list.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\mixins.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\path.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\rotated-flipped.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\screen-reader.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\stacked.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\less\variables.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\.bower.json" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\.gitignore" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\.npmignore" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\bower.json" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\fonts\fontawesome-webfont-old.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\fonts\fontawesome-webfont.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\fonts\fontawesome-webfont.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\fonts\FontAwesome.otf" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\animated.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\bordered-pulled.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\core.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\extras.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\fixed-width.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\font-awesome.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\icons.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\larger.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\list.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\mixins.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\path.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\rotated-flipped.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\spinning.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\stacked.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\less\variables.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\font-awesome.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_animated.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_bordered-pulled.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_core.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_extras.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_fixed-width.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_icons.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_larger.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_list.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_mixins.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_path.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_rotated-flipped.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_spinning.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_stacked.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\old\scss\_variables.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\font-awesome.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_animated.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_core.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_icons.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_larger.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_list.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_mixins.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_path.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_stacked.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\font-awesome\scss\_variables.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-arrows-10.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-arrows-10.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-arrows-10.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-basic-10.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-basic-10.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-basic-10.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-basic-elaboration-10.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-ecommerce-10.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-ecommerce-10.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-ecommerce-10.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-music-10.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-music-10.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-music-10.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-software-10.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-software-10.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-software-10.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-weather-10.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-weather-10.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\fonts\linea-weather-10.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\linea.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\linea-icons\linea.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\fonts\Material-Design-Iconic-Font.woff2" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\material-design-iconic-font\fonts\materialdesignicons-webfont.woff2" />
+    <Content Include="Templates\material-lite-master\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\simple-line-icons\fonts\Simple-Line-Icons.woff2" />
+    <Content Include="Templates\material-lite-master\scss\icons\simple-line-icons\less\simple-line-icons.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\simple-line-icons\scss\simple-line-icons.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\themify-icons\fonts\themify.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\themify-icons\fonts\themify.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\themify-icons\fonts\themify.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\themify-icons\themify-icons.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\fonts\weathericons-regular-webfont.eot" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\fonts\weathericons-regular-webfont.ttf" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\fonts\weathericons-regular-webfont.woff" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\fonts\weathericons-regular-webfont.woff2" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-classes\classes-beaufort.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-classes\classes-day.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-classes\classes-direction.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-classes\classes-misc.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-classes\classes-moon-aliases.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-classes\classes-moon.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-classes\classes-neutral.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-classes\classes-night.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-classes\classes-time.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-classes\classes-wind-aliases.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-classes\classes-wind-degrees.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-classes\classes-wind.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-variables\variables-beaufort.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-variables\variables-day.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-variables\variables-direction.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-variables\variables-misc.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-variables\variables-moon.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-variables\variables-neutral.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-variables\variables-night.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-variables\variables-time.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\icon-variables\variables-wind-names.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\mappings\wi-forecast-io.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\mappings\wi-owm.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\mappings\wi-wmo4680.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\mappings\wi-yahoo.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\weather-icons-classes.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\weather-icons-core.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\weather-icons-variables.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\weather-icons-wind.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\weather-icons-wind.min.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\weather-icons.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\weather-icons.min.less" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-classes\classes-beaufort.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-classes\classes-day.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-classes\classes-direction.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-classes\classes-misc.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-classes\classes-moon-aliases.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-classes\classes-moon.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-classes\classes-neutral.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-classes\classes-night.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-classes\classes-time.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-classes\classes-wind-aliases.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-classes\classes-wind-degrees.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-classes\classes-wind.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-variables\variables-beaufort.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-variables\variables-day.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-variables\variables-direction.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-variables\variables-misc.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-variables\variables-moon.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-variables\variables-neutral.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-variables\variables-night.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-variables\variables-time.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\icon-variables\variables-wind-names.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\mappings\wi-forecast-io.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\mappings\wi-owm.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\mappings\wi-wmo4680.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\mappings\wi-yahoo.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\weather-icons-classes.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\weather-icons-core.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\weather-icons-variables.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\weather-icons-wind.min.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\weather-icons-wind.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\weather-icons.min.scss" />
+    <Content Include="Templates\material-lite-master\scss\icons\weather-icons\sass\weather-icons.scss" />
+    <Content Include="Templates\material-lite-master\scss\material.scss" />
+    <Content Include="Templates\material-lite-master\scss\pages.scss" />
+    <Content Include="Templates\material-lite-master\scss\prepros-6.config" />
+    <Content Include="Templates\material-lite-master\scss\responsive.scss" />
+    <Content Include="Templates\material-lite-master\scss\sidebar.scss" />
+    <Content Include="Templates\material-lite-master\scss\style.scss" />
+    <Content Include="Templates\material-lite-master\scss\variable.scss" />
+    <Content Include="Templates\material-lite-master\scss\widgets.scss" />
+    <Content Include="Views\AdminLayout\Index.cshtml" />
+    <Content Include="Views\Category\Index.cshtml" />
+    <Content Include="Views\AdminLayout\PartialHead.cshtml" />
+    <Content Include="Views\AdminLayout\PartialSidebar.cshtml" />
+    <Content Include="Views\AdminLayout\PartialScript.cshtml" />
+    <Content Include="Views\AdminLayout\PartialNavbar.cshtml" />
+    <Content Include="Views\AdminLayout\PartialPageRowTitle.cshtml" />
+    <Content Include="Views\AdminLayout\PartialPreloader.cshtml" />
+    <Content Include="Views\AdminLayout\PartialFooter.cshtml" />
+    <Content Include="Views\Category\AddCategory.cshtml" />
+    <Content Include="Views\Category\UpdateCategory.cshtml" />
+    <Content Include="Views\Instructor\Index.cshtml" />
+    <Content Include="Views\Instructor\AddInstructor.cshtml" />
+    <Content Include="Views\Instructor\UpdateInstructor.cshtml" />
+    <Content Include="Views\Student\AddStudent.cshtml" />
+    <Content Include="Views\Student\Index.cshtml" />
+    <Content Include="Views\Student\UpdateStudent.cshtml" />
+    <Content Include="Views\Course\Index.cshtml" />
+    <Content Include="Views\Course\CreateCourse.cshtml" />
+    <Content Include="Views\Course\UpdateCourse.cshtml" />
+    <Content Include="Views\InstructorAnalysis\Index.cshtml" />
+    <Content Include="Views\InstructorAnalysis\InstructorPanelPartial.cshtml" />
+    <Content Include="Views\InstructorAnalysis\CommentPartial.cshtml" />
+    <Content Include="Views\InstructorAnalysis\CourseListByInstructor.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Profile\Index.cshtml" />
+    <Content Include="Views\Profile\MyCourseList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202311041723188_mig_add_columns.resx">
+      <DependentUpon>202311041723188_mig_add_columns.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311041737455_mig_add_comment.resx">
+      <DependentUpon>202311041737455_mig_add_comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311041746073_mig_add_relations_comment.resx">
+      <DependentUpon>202311041746073_mig_add_relations_comment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311041748428_mig_add_commentupdate.resx">
+      <DependentUpon>202311041748428_mig_add_commentupdate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311042015337_mig_add_review.resx">
+      <DependentUpon>202311042015337_mig_add_review.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311050844225_mig_add_process.resx">
+      <DependentUpon>202311050844225_mig_add_process.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>64833</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44379/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
