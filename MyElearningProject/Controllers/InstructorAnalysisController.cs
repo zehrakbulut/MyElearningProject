@@ -13,6 +13,7 @@ namespace MyElearningProject.Controllers
 
         public ActionResult Index()
         {
+            TempData["Location"] = "InstructorAnalaysis";
             return View();
         }
 
