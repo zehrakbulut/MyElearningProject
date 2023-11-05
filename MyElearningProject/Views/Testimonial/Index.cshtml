@@ -1,0 +1,53 @@
+﻿@model List<MyElearningProject.DAL.Entities.Testimonial>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+    int count = 0;
+    var status = "";
+    var color = "";
+    var button = "";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Referans Listesi
+                <br />
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Referans Adı Soyadı</th>
+                        <th>Başlık</th>
+                        <th>Resim</th>
+                        <th>Yorum</th>
+                        <th>Ana Sayfada Görünüm</th>
+                        <th>Durum</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                    <tbody>
+                        </tr>
+                        @foreach (var item in Model)
+                        {
+                            count++;
+                            if (item.Status == true) { status = "Görünüyor"; color = "success"; button = "Görünmesin"; } else { status = "Görünmüyor"; color = "danger"; button = "Görünsün"; }
+                        <tr>
+                            <td>@count</td>
+                            <td>@item.NameSurname</td>
+                            <td>@item.Title</td>
+                            <td>@item.ImageUrl</td>
+                            <td>@item.Comment</td>
+                            <td class="text-@color">@status</td>
+                            <td><a href="/Testimonial/ChangeStatus/@item.TestimonialID" class="btn btn-outline-info">@button</a></td>
+                            <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-outline-success">Güncelle</a></td>
+                        </tr>
+                        }
+                    </tbody>
+                </table>
+                <a href="/Testimonial/AddTestimonial/" class="btn btn-outline-primary">Yeni Referans Girişi</a>
+            </div>
+        </div>
+    </div>
+</div>
+
