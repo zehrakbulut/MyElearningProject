@@ -54,7 +54,7 @@ namespace MyElearningProject.Controllers
 
         public PartialViewResult PartialTeam()
         {
-            var values = context.Instructors.ToList();
+            var values = context.Instructors.Take(4).ToList();
             return PartialView(values);
         }
 
