@@ -12,6 +12,8 @@ namespace MyElearningProject.DAL.Entities
         public decimal Price { get; set; }
         public int Duration { get; set; }
         public string ImageUrl { get; set; }
+        public int StudentCount { get; set; }
+        public string CourseCategoryName { get; set; }
 
         public int CategoryID { get; set; }
         public virtual Category Category { get; set; }

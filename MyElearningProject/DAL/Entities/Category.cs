@@ -11,6 +11,7 @@ namespace MyElearningProject.DAL.Entities
         [Key]
         public int CategoryID { get; set; }
         public string CategoryName { get; set; }
+        public string Image { get; set; }
 
         public List<Course> Courses { get; set; }
     }

@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/UILayout/Index.cshtml";
+}
+
+
+    <!-- Header Start -->
+    @Html.Action("PartialHeader","UIAbout")
+    <!-- Header End -->
+
+
+    <!-- Service Start -->
+    @Html.Action("PartialService","Default")
+    <!-- Service End -->
+
+
+    <!-- About Start -->
+    @Html.Action("PartialAbout","Default")
+    @Html.Action("PartialAboutPurpose","Default")
+    <!-- About End -->
+
+
+    <!-- Team Start -->
+    @Html.Action("PartialTeam","Default")
+    <!-- Team End -->
+        
+

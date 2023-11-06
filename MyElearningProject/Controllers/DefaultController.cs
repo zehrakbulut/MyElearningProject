@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyElearningProject.DAL.Context;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,7 +9,8 @@ namespace MyElearningProject.Controllers
 {
     public class DefaultController : Controller
     {
-        // GET: Default
+        ELearningContext context = new ELearningContext();
+        
         public ActionResult Index()
         {
             return View();
@@ -16,37 +18,50 @@ namespace MyElearningProject.Controllers
 
         public PartialViewResult PartialCarousel()
         {
-            return PartialView();
+            var values = context.Features.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialService()
         {
-            return PartialView();
+            var values = context.Services.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialAbout()
         {
-            return PartialView();
+            var values = context.Abouts.ToList();
+            return PartialView(values);
+        }
+
+        public PartialViewResult PartialAboutPurpose()
+        {
+            var values = context.AboutPurposes.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialCategories()
         {
-            return PartialView();
+            var values = context.Categories.Take(3).ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialCourses()
         {
-            return PartialView();
+            var values = context.Courses.Take(3).ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialTeam()
         {
-            return PartialView();
+            var values = context.Instructors.ToList();
+            return PartialView(values);
         }
 
         public PartialViewResult PartialTestimonial()
         {
-            return PartialView();
+            var values = context.Testimonials.ToList();
+            return PartialView(values);
         }
     }
 }

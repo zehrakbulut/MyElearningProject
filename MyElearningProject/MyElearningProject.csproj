@@ -127,6 +127,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\UIAboutController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
     <Compile Include="Controllers\CourseController.cs" />
@@ -138,15 +139,20 @@
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\UICourseController.cs" />
     <Compile Include="Controllers\UILayoutController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
+    <Compile Include="DAL\Entities\About.cs" />
+    <Compile Include="DAL\Entities\AboutPurpose.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
     <Compile Include="DAL\Entities\Comment.cs" />
     <Compile Include="DAL\Entities\Course.cs" />
     <Compile Include="DAL\Entities\CourseRegister.cs" />
+    <Compile Include="DAL\Entities\Feature.cs" />
     <Compile Include="DAL\Entities\Instructor.cs" />
     <Compile Include="DAL\Entities\Process.cs" />
     <Compile Include="DAL\Entities\Review.cs" />
+    <Compile Include="DAL\Entities\Service.cs" />
     <Compile Include="DAL\Entities\Student.cs" />
     <Compile Include="DAL\Entities\Testimonial.cs" />
     <Compile Include="Global.asax.cs">
@@ -179,6 +185,34 @@
     <Compile Include="Migrations\202311051404495_mig_add_boolstatus.cs" />
     <Compile Include="Migrations\202311051404495_mig_add_boolstatus.designer.cs">
       <DependentUpon>202311051404495_mig_add_boolstatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311060928356_mig_add_featuer.cs" />
+    <Compile Include="Migrations\202311060928356_mig_add_featuer.designer.cs">
+      <DependentUpon>202311060928356_mig_add_featuer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061112101_mig_add_service.cs" />
+    <Compile Include="Migrations\202311061112101_mig_add_service.designer.cs">
+      <DependentUpon>202311061112101_mig_add_service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061131256_mig_add_about.cs" />
+    <Compile Include="Migrations\202311061131256_mig_add_about.designer.cs">
+      <DependentUpon>202311061131256_mig_add_about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061143110_mig_add_aboutpurpose.cs" />
+    <Compile Include="Migrations\202311061143110_mig_add_aboutpurpose.designer.cs">
+      <DependentUpon>202311061143110_mig_add_aboutpurpose.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061205061_mig_add_addCategoryImage.cs" />
+    <Compile Include="Migrations\202311061205061_mig_add_addCategoryImage.designer.cs">
+      <DependentUpon>202311061205061_mig_add_addCategoryImage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061229208_mig_add_updatecolumn.cs" />
+    <Compile Include="Migrations\202311061229208_mig_add_updatecolumn.designer.cs">
+      <DependentUpon>202311061229208_mig_add_updatecolumn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311061231200_mig_add_updatecolumn_back.cs" />
+    <Compile Include="Migrations\202311061231200_mig_add_updatecolumn_back.designer.cs">
+      <DependentUpon>202311061231200_mig_add_updatecolumn_back.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -1008,10 +1042,20 @@
     <Content Include="Views\Default\PartialCourses.cshtml" />
     <Content Include="Views\Default\PartialTeam.cshtml" />
     <Content Include="Views\Default\PartialTestimonial.cshtml" />
+    <Content Include="Views\Default\PartialAboutPurpose.cshtml" />
+    <Content Include="Views\UIAbout\Index.cshtml" />
+    <Content Include="Views\UIAbout\PartialHead.cshtml" />
+    <Content Include="Views\UIAbout\PartialHeader.cshtml" />
+    <Content Include="Views\UICourse\Index.cshtml" />
+    <Content Include="Views\UICourse\PartialHeader.cshtml" />
+    <Content Include="Views\UICourse\PartialCategories.cshtml" />
+    <Content Include="Views\UICourse\PartialCourses.cshtml" />
+    <Content Include="Views\UICourse\PartialTestimonial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
+    <Folder Include="Views\About\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1047,6 +1091,27 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311051404495_mig_add_boolstatus.resx">
       <DependentUpon>202311051404495_mig_add_boolstatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311060928356_mig_add_featuer.resx">
+      <DependentUpon>202311060928356_mig_add_featuer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061112101_mig_add_service.resx">
+      <DependentUpon>202311061112101_mig_add_service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061131256_mig_add_about.resx">
+      <DependentUpon>202311061131256_mig_add_about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061143110_mig_add_aboutpurpose.resx">
+      <DependentUpon>202311061143110_mig_add_aboutpurpose.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061205061_mig_add_addCategoryImage.resx">
+      <DependentUpon>202311061205061_mig_add_addCategoryImage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061229208_mig_add_updatecolumn.resx">
+      <DependentUpon>202311061229208_mig_add_updatecolumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311061231200_mig_add_updatecolumn_back.resx">
+      <DependentUpon>202311061231200_mig_add_updatecolumn_back.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

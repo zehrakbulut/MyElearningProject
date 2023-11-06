@@ -10,7 +10,7 @@ namespace MyElearningProject.Controllers
 {
     public class CategoryController : Controller
     {
-        ELearningContext context = new ELearningContext();
+        ELearningContext context = new ELearningContext();  
 
         public ActionResult Index()
         {
