@@ -1,0 +1,8 @@
+﻿@model List<MyElearningProject.DAL.Entities.Map>
+
+@foreach (var item in Model)
+{
+<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+    <iframe src="@item.EmbedLink" width="400" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</div>
+}

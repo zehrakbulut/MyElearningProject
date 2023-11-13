@@ -22,5 +22,10 @@ namespace MyElearningProject.DAL.Context
         public DbSet<Service> Services { get; set; }
         public DbSet<About> Abouts { get; set; }
         public DbSet<AboutPurpose> AboutPurposes { get; set; }
+        public DbSet<Information> Informations { get; set; }
+        public DbSet<InformationAddress> InformationAddresses { get; set; }
+        public DbSet<Map> Maps { get; set; }
+        public DbSet<Message> Messages { get; set; }
+        public DbSet<Admin> Admins { get; set; }
     }
 }

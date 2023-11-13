@@ -139,17 +139,23 @@
     <Compile Include="Controllers\ProfileController.cs" />
     <Compile Include="Controllers\TestimonialController.cs" />
     <Compile Include="Controllers\StudentController.cs" />
+    <Compile Include="Controllers\UIContactController.cs" />
     <Compile Include="Controllers\UICourseController.cs" />
     <Compile Include="Controllers\UILayoutController.cs" />
     <Compile Include="DAL\Context\ELearningContext.cs" />
     <Compile Include="DAL\Entities\About.cs" />
     <Compile Include="DAL\Entities\AboutPurpose.cs" />
+    <Compile Include="DAL\Entities\Admin.cs" />
     <Compile Include="DAL\Entities\Category.cs" />
     <Compile Include="DAL\Entities\Comment.cs" />
     <Compile Include="DAL\Entities\Course.cs" />
     <Compile Include="DAL\Entities\CourseRegister.cs" />
     <Compile Include="DAL\Entities\Feature.cs" />
+    <Compile Include="DAL\Entities\Information.cs" />
+    <Compile Include="DAL\Entities\InformationAddress.cs" />
     <Compile Include="DAL\Entities\Instructor.cs" />
+    <Compile Include="DAL\Entities\Map.cs" />
+    <Compile Include="DAL\Entities\Message.cs" />
     <Compile Include="DAL\Entities\Process.cs" />
     <Compile Include="DAL\Entities\Review.cs" />
     <Compile Include="DAL\Entities\Service.cs" />
@@ -213,6 +219,30 @@
     <Compile Include="Migrations\202311061231200_mig_add_updatecolumn_back.cs" />
     <Compile Include="Migrations\202311061231200_mig_add_updatecolumn_back.designer.cs">
       <DependentUpon>202311061231200_mig_add_updatecolumn_back.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311121329258_mig_add_information.cs" />
+    <Compile Include="Migrations\202311121329258_mig_add_information.designer.cs">
+      <DependentUpon>202311121329258_mig_add_information.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311121613263_mig_add_informationAddress.cs" />
+    <Compile Include="Migrations\202311121613263_mig_add_informationAddress.designer.cs">
+      <DependentUpon>202311121613263_mig_add_informationAddress.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311121624295_mig_add_map.cs" />
+    <Compile Include="Migrations\202311121624295_mig_add_map.designer.cs">
+      <DependentUpon>202311121624295_mig_add_map.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311121631497_mig_add_message.cs" />
+    <Compile Include="Migrations\202311121631497_mig_add_message.designer.cs">
+      <DependentUpon>202311121631497_mig_add_message.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311130922141_mig_add_emailandpassword.cs" />
+    <Compile Include="Migrations\202311130922141_mig_add_emailandpassword.designer.cs">
+      <DependentUpon>202311130922141_mig_add_emailandpassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311131050019_mig_add_admin.cs" />
+    <Compile Include="Migrations\202311131050019_mig_add_admin.designer.cs">
+      <DependentUpon>202311131050019_mig_add_admin.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -288,6 +318,11 @@
     <Content Include="Templates\elearning-html-template\READ-ME.txt" />
     <Content Include="Templates\elearning-html-template\team.html" />
     <Content Include="Templates\elearning-html-template\testimonial.html" />
+    <Content Include="Templates\hacker-login-form\dist\index.html" />
+    <Content Include="Templates\hacker-login-form\dist\style.css" />
+    <Content Include="Templates\hacker-login-form\LICENSE.txt" />
+    <Content Include="Templates\hacker-login-form\src\index.html" />
+    <Content Include="Templates\hacker-login-form\src\style.css" />
     <Content Include="Templates\material-lite-master\assets\images\background\profile-bg.jpg" />
     <Content Include="Templates\material-lite-master\assets\images\big\img1.jpg" />
     <Content Include="Templates\material-lite-master\assets\images\big\img2.jpg" />
@@ -939,7 +974,6 @@
     <Content Include="Views\InstructorAnalysis\InstructorPanelPartial.cshtml" />
     <Content Include="Views\InstructorAnalysis\CommentPartial.cshtml" />
     <Content Include="Views\InstructorAnalysis\CourseListByInstructor.cshtml" />
-    <Content Include="Views\Login\Index.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
     <Content Include="Views\Profile\MyCourseList.cshtml" />
     <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
@@ -1051,6 +1085,19 @@
     <Content Include="Views\UICourse\PartialCategories.cshtml" />
     <Content Include="Views\UICourse\PartialCourses.cshtml" />
     <Content Include="Views\UICourse\PartialTestimonial.cshtml" />
+    <Content Include="Views\UIContact\Index.cshtml" />
+    <Content Include="Views\UIContact\PartialHeader.cshtml" />
+    <Content Include="Views\UIContact\PartialContactInformation.cshtml" />
+    <Content Include="Views\UIContact\PartialContactMap.cshtml" />
+    <Content Include="Views\UIContact\PartialContactMessage.cshtml" />
+    <Content Include="Views\UIContact\PartialContactInformationAddress.cshtml" />
+    <Content Include="Views\Login\PageFeaturePartial.cshtml" />
+    <Content Include="Views\Login\LoginCheckPartial.cshtml" />
+    <Content Include="Views\Login\Index.cshtml" />
+    <Content Include="Views\Login\StudentIndex.cshtml" />
+    <Content Include="Views\Login\InstructorIndex.cshtml" />
+    <Content Include="Views\Login\AdminIndex.cshtml" />
+    <Content Include="Templates\hacker-login-form\README.md" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1112,6 +1159,24 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311061231200_mig_add_updatecolumn_back.resx">
       <DependentUpon>202311061231200_mig_add_updatecolumn_back.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311121329258_mig_add_information.resx">
+      <DependentUpon>202311121329258_mig_add_information.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311121613263_mig_add_informationAddress.resx">
+      <DependentUpon>202311121613263_mig_add_informationAddress.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311121624295_mig_add_map.resx">
+      <DependentUpon>202311121624295_mig_add_map.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311121631497_mig_add_message.resx">
+      <DependentUpon>202311121631497_mig_add_message.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311130922141_mig_add_emailandpassword.resx">
+      <DependentUpon>202311130922141_mig_add_emailandpassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311131050019_mig_add_admin.resx">
+      <DependentUpon>202311131050019_mig_add_admin.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
