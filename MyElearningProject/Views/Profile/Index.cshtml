@@ -1,10 +1,31 @@
 ﻿
 @{
-    Layout = null;
+    Layout = "~/Views/StudentLayout/Index.cshtml"; ;
 }
 
-<h3>Profil Sayfası</h3>
-
-<h4> @ViewBag.mail</h4>
-
-<h5>Hoşgeldin @ViewBag.name</h5>
+<div class="row">
+    <!-- Column -->
+    <div class="col-lg-4 col-xlg-3 col-md-5">
+        <!-- Column -->
+        @Html.Action("StudentInformationPartial","Profile")
+        <!-- Column -->
+        
+    </div>
+    <div class="col-lg-8 col-xlg-9 col-md-7">
+        <div class="card">
+            <!-- Nav tabs -->
+            <ul class="nav nav-tabs profile-tab" role="tablist">
+                <li class="nav-item"> <a class="nav-link active" data-toggle="tab" href="#home" role="tab">Aktiviteler</a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#profile" role="tab">Profil</a> </li>
+                <li class="nav-item"> <a class="nav-link" data-toggle="tab" href="#settings" role="tab">Ayarlar</a> </li>
+            </ul>
+            <!-- Tab panes -->
+            <div class="tab-content">
+                @Html.Action("StudentActivityPartial", "Profile")
+                <!--second tab-->
+                @Html.Action("StudentProfilePartial","Profile")
+                @Html.Action("StudentSettingsPartial","Profile")
+            </div>
+        </div>
+    </div>
+</div>

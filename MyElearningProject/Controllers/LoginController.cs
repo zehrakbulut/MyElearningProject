@@ -43,7 +43,7 @@ namespace MyElearningProject.Controllers
             if (values != null)
             {
                 FormsAuthentication.SetAuthCookie(values.Email, false);
-                Session["CurrentMail"] = values.Email;
+                Session["CurrentMail"] = values.Name+" "+values.Surname;
                 Session.Timeout = 60;
                 return RedirectToAction("Index", "Profile");
             }
@@ -83,7 +83,7 @@ namespace MyElearningProject.Controllers
             if (values != null)
             {
                 FormsAuthentication.SetAuthCookie(values.UserName, false);
-                Session["CurrentUserName"] = values.UserName;
+                Session["CurrentMail"] = values.UserName;
                 Session.Timeout = 60;
                 return RedirectToAction("Index", "Category");
             }

@@ -133,6 +133,7 @@
     <Compile Include="Controllers\InstructorLayoutController.cs" />
     <Compile Include="Controllers\ContactMapController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
+    <Compile Include="Controllers\StudentLayoutController.cs" />
     <Compile Include="Controllers\UIAboutController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
@@ -1136,6 +1137,18 @@
     <Content Include="Views\InformationAddress\Index.cshtml" />
     <Content Include="Views\InformationAddress\AddInformationAddress.cshtml" />
     <Content Include="Views\InformationAddress\UpdateInformationAddress.cshtml" />
+    <Content Include="Views\StudentLayout\Index.cshtml" />
+    <Content Include="Views\StudentLayout\PartialHead.cshtml" />
+    <Content Include="Views\StudentLayout\PartialPreloader.cshtml" />
+    <Content Include="Views\StudentLayout\PartialHeader.cshtml" />
+    <Content Include="Views\StudentLayout\PartialSidebar.cshtml" />
+    <Content Include="Views\StudentLayout\PartialScript.cshtml" />
+    <Content Include="Views\StudentLayout\PartialRowPage.cshtml" />
+    <Content Include="Views\StudentLayout\PartialFooter.cshtml" />
+    <Content Include="Views\Profile\StudentInformationPartial.cshtml" />
+    <Content Include="Views\Profile\StudentActivityPartial.cshtml" />
+    <Content Include="Views\Profile\StudentProfilePartial.cshtml" />
+    <Content Include="Views\Profile\StudentSettingsPartial.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -7,10 +7,8 @@ using System.Web.Mvc;
 
 namespace MyElearningProject.Controllers
 {
-    public class AdminLayoutController : Controller
+    public class StudentLayoutController : Controller
     {
-
-
         ELearningContext context = new ELearningContext();
 
         public ActionResult Index()
@@ -18,40 +16,40 @@ namespace MyElearningProject.Controllers
             return View();
         }
 
-        public PartialViewResult PartialHead()
+        public ActionResult PartialHead()
         {
             return PartialView();
         }
 
-        public PartialViewResult PartialSidebar()
-        {
-            return PartialView();
-        }
-        
-        public PartialViewResult PartialScript()
+        public ActionResult PartialPreloader()
         {
             return PartialView();
         }
 
-        public PartialViewResult PartialNavbar()
+        public ActionResult PartialHeader()
         {
             string values = Session["CurrentMail"].ToString();
-            ViewBag.adminUserName = values;
-            int id = context.Admins.Where(x => x.UserName == values).Select(y => y.AdminID).FirstOrDefault();
+            ViewBag.studentName = values;
+            int id = context.Students.Where(x => x.Name == values).Select(y => y.StudentID).FirstOrDefault();
             return PartialView();
         }
 
-        public PartialViewResult PartialPageRowTitle()
+        public ActionResult PartialSidebar()
         {
             return PartialView();
         }
 
-        public PartialViewResult PartialPreloader()
+        public ActionResult PartialRowPage()
         {
             return PartialView();
         }
 
-        public PartialViewResult PartialFooter()    
+        public ActionResult PartialFooter()
+        {
+            return PartialView();
+        }
+
+        public ActionResult PartialScript()
         {
             return PartialView();
         }

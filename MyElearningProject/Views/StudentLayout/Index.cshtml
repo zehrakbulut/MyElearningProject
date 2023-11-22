@@ -1,0 +1,44 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("PartialHead","StudentLayout")
+
+<body class="fix-header fix-sidebar card-no-border">
+     
+    @Html.Action("PartialPreloader","StudentLayout")
+     
+    <div id="main-wrapper">
+
+        @Html.Action("PartialHeader", "StudentLayout")
+
+        @Html.Action("PartialSidebar", "StudentLayout")
+
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                @Html.Action("PartialRowPage", "StudentLayout")
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-block">
+                                @RenderBody()
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            @Html.Action("PartialFooter", "StudentLayout")
+
+        </div>
+
+    </div>
+
+@Html.Action("PartialScript","StudentLayout")
+</body>
+
+</html>
