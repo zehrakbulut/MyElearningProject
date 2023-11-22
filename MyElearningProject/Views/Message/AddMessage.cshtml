@@ -1,0 +1,23 @@
+﻿@model MyElearningProject.DAL.Entities.Message
+@{
+    ViewBag.Title = "AddMessage";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Mesaj Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Ad Soyad</label>
+    @Html.TextBoxFor(x => x.NameSurname, new { @class = "form-control" })
+    <br /><br />
+    <label>E-posta</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br /><br />
+    <label>Konu</label>
+    @Html.TextBoxFor(x => x.Subject, new { @class = "form-control" })
+    <br /><br />
+    <label>Mesaj</label>
+    @Html.TextBoxFor(x => x.MessageDescription, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn btn-primary">Kaydet</button>
+</form> 

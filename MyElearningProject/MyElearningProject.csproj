@@ -127,6 +127,12 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\AboutPurposeController.cs" />
+    <Compile Include="Controllers\InformationAddressController.cs" />
+    <Compile Include="Controllers\InstructorLayoutController.cs" />
+    <Compile Include="Controllers\ContactMapController.cs" />
+    <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\UIAboutController.cs" />
     <Compile Include="Controllers\AdminLayoutController.cs" />
     <Compile Include="Controllers\CategoryController.cs" />
@@ -713,6 +719,11 @@
     <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-time.css" />
     <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-wind-names.css" />
     <Content Include="Templates\material-lite-master\table-basic.html" />
+    <Content Include="Templates\web\css\font-awesome.css" />
+    <Content Include="Templates\web\css\style.css" />
+    <Content Include="Templates\web\images\bg.jpg" />
+    <Content Include="Templates\web\index.html" />
+    <Content Include="Templates\web\w3layouts-License.txt" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -1098,11 +1109,37 @@
     <Content Include="Views\Login\InstructorIndex.cshtml" />
     <Content Include="Views\Login\AdminIndex.cshtml" />
     <Content Include="Templates\hacker-login-form\README.md" />
+    <Content Include="Templates\web\fonts\fontawesome-webfont.eot" />
+    <Content Include="Templates\web\fonts\fontawesome-webfont.ttf" />
+    <Content Include="Templates\web\fonts\fontawesome-webfont.woff" />
+    <Content Include="Templates\web\fonts\fontawesome-webfont.woff2" />
+    <Content Include="Templates\web\fonts\FontAwesome.otf" />
+    <Content Include="Views\InstructorLayout\Index.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialHead.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialPreloader.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialHeader.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialSidebar.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialWrapper.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialScript.cshtml" />
+    <Content Include="Views\ContactMap\Index.cshtml" />
+    <Content Include="Views\ContactMap\AddMap.cshtml" />
+    <Content Include="Views\ContactMap\UpdateMap.cshtml" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\About\AddAbout.cshtml" />
+    <Content Include="Views\About\UpdateAbout.cshtml" />
+    <Content Include="Views\AboutPurpose\Index.cshtml" />
+    <Content Include="Views\AboutPurpose\AddAboutPurpose.cshtml" />
+    <Content Include="Views\AboutPurpose\UpdateAboutPurpose.cshtml" />
+    <Content Include="Views\Message\Index.cshtml" />
+    <Content Include="Views\Message\AddMessage.cshtml" />
+    <Content Include="Views\Message\UpdateMessage.cshtml" />
+    <Content Include="Views\InformationAddress\Index.cshtml" />
+    <Content Include="Views\InformationAddress\AddInformationAddress.cshtml" />
+    <Content Include="Views\InformationAddress\UpdateInformationAddress.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Models\" />
-    <Folder Include="Views\About\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />

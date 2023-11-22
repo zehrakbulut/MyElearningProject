@@ -8,54 +8,54 @@ using System.Web.Mvc;
 
 namespace MyElearningProject.Controllers
 {
-    public class StudentController : Controller
+    public class AboutController : Controller
     {
+
         ELearningContext context = new ELearningContext();
 
         public ActionResult Index()
         {
-            TempData["Location"] = "Öğrenciler";
-            var values = context.Students.ToList();
+            TempData["Location"] = "Hakkımızda";
+            var values = context.Abouts.ToList();
             return View(values);
         }
 
         [HttpGet]
-        public ActionResult AddStudent()
+        public ActionResult AddAbout()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult AddStudent(Student student)
+        public ActionResult AddAbout(About about)
         {
-            context.Students.Add(student);
+            context.Abouts.Add(about);
             context.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        public ActionResult DeleteStudent(int id)
+        public ActionResult DeleteAbout(int id)
         {
-            var value = context.Students.Find(id);
-            context.Students.Remove(value);
+            var value = context.Abouts.Find(id);
+            context.Abouts.Remove(value);
             context.SaveChanges();
             return RedirectToAction("Index");
         }
 
         [HttpGet]
-        public ActionResult UpdateStudent(int id)
+        public ActionResult UpdateAbout(int id)
         {
-            var value = context.Students.Find(id);
+            var value = context.Abouts.Find(id);
             return View(value);
         }
 
         [HttpPost]
-        public ActionResult UpdateStudent(Student student)
+        public ActionResult UpdateAbout(About about)
         {
-            var value = context.Students.Find(student.StudentID);
-            value.Name = student.Name;
-            value.Surname = student.Surname;
-            value.Email = student.Email;
-            value.Password = student.Password;
+            var value = context.Abouts.Find(about.AboutID);
+            value.Title = about.Title;
+            value.Description1 = about.Description1;
+            value.Description2 = about.Description2;
             context.SaveChanges();
             return RedirectToAction("Index");
         }

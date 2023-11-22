@@ -1,4 +1,5 @@
 ﻿using MyElearningProject.DAL.Context;
+using MyElearningProject.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,8 +10,9 @@ namespace MyElearningProject.Controllers
 {
     public class UIContactController : Controller
     {
-        ELearningContext context=new ELearningContext();
+        ELearningContext context = new ELearningContext();
         // GET: UIContact
+        
         public ActionResult Index()
         {
             return View();
@@ -39,10 +41,18 @@ namespace MyElearningProject.Controllers
             return PartialView(values);
         }
 
+        [HttpGet]
         public PartialViewResult PartialContactMessage()
         {
-            var values = context.Messages.ToList();
-            return PartialView(values);
+            return PartialView();
+        }
+
+        [HttpPost]
+        public PartialViewResult PartialContactMessage(Message message)
+        {
+            context.Messages.Add(message);
+            context.SaveChanges();
+            return PartialView();
         }
     }
 }

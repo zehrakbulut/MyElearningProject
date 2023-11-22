@@ -1,0 +1,36 @@
+﻿@model List<MyElearningProject.DAL.Entities.Map>
+
+@{ ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml"; }
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Harita Ekleme
+                <br />
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Harita Linki</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                <tr>
+                    <td>@item.MapID</td>
+                    <td>@(item.EmbedLink.Length >= 50 ? item.EmbedLink.Substring(0, 50) : item.EmbedLink)</td>
+                    <td><a href="/ContactMap/DeleteMap/@item.MapID" class="btn btn-outline-danger">Sil</a></td>
+                    <td><a href="/ContactMap/UpdateMap/@item.MapID" class="btn btn-outline-success">Güncelle</a></td>
+                </tr>
+}
+                </table>
+                <a href="/ContactMap/AddMap/" class="btn btn-outline-primary">Yeni Harita Ekle</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

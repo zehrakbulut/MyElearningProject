@@ -1,0 +1,15 @@
+﻿@model MyElearningProject.DAL.Entities.Map
+@{
+    ViewBag.Title = "AddInstructorMap";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Harita Kaydı</h2>
+
+<form method="post">
+    <br />
+    <label>Harita Linki</label>
+    <input type="text" name="EmbedLink" class="form-control" />
+    <br /><br />
+    <button class="btn btn-primary">Haritayı Kaydet</button>
+</form>

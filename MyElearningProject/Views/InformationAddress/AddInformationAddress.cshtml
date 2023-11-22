@@ -1,0 +1,26 @@
+﻿@model MyElearningProject.DAL.Entities.InformationAddress
+@{
+    ViewBag.Title = "AddInformationAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>İletişim Bilgisi Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Başlık</label>
+    @Html.TextBoxFor(x => x.Title1, new { @class = "form-control" })
+    <br /><br />
+    <label>Adres</label>
+    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+    <br /><br />
+    <label>İletişim</label>
+    @Html.TextBoxFor(x => x.Title2, new { @class = "form-control" })
+    <br /><br />
+    <label>Numara</label>
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <br /><br />
+    <label>Mail Hesabı</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn btn-primary">Kaydet</button>
+</form> 

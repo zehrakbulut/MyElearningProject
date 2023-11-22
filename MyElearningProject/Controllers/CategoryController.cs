@@ -14,7 +14,7 @@ namespace MyElearningProject.Controllers
 
         public ActionResult Index()
         {
-            TempData["Location"] = "Category";
+            TempData["Location"] = "Kategoriler";
             var values = context.Categories.ToList();
             return View(values);
         }

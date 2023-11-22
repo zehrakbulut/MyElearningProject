@@ -1,0 +1,40 @@
+﻿@model List<MyElearningProject.DAL.Entities.Message>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Mesaj Listesi
+                <br />
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Adı Soyadı</th>
+                        <th>Mail Hesabı</th>
+                        <th>Konu</th>
+                        <th>Açıklama</th>
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.MessageID</td>
+                            <td>@item.NameSurname</td>
+                            <td>@item.Email</td>
+                            <td>@item.Subject</td>
+                            <td>@item.MessageDescription</td>
+                            <td><a href="/Message/DeleteMessage/@item.MessageID" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/Message/UpdateMessage/@item.MessageID" class="btn btn-outline-success">Güncelle</a></td>
+                        </tr>
+                    }
+                </table>
+                <a href="/Message/AddMessage/" class="btn btn-outline-primary">Yeni Mesaj Girişi</a>
+            </div>
+        </div>
+    </div>
+</div>

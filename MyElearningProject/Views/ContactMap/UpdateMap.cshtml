@@ -1,0 +1,16 @@
+﻿@model MyElearningProject.DAL.Entities.Map
+    @{ 
+    ViewBag.Title = "UpdateMap";
+    Layout = "~/Views/AdminLayout/Index.cshtml"; 
+    }
+
+<h2>Harita Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.MapID)
+    <br /><br />
+    @Html.TextBoxFor(x => x.EmbedLink, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn btn-primary">Kategoriyi Güncelle</button>
+</form>
+

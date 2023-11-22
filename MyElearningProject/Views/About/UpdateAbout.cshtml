@@ -1,0 +1,17 @@
+﻿@model MyElearningProject.DAL.Entities.About
+@{ ViewBag.Title = "UpdateAbout";
+                Layout = "~/Views/AdminLayout/Index.cshtml"; }
+
+<h2>Hakkımızda Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.AboutID)
+    <br /><br />
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br /><br />
+    @Html.TextBoxFor(x => x.Description1, new { @class = "form-control" })
+    <br /><br />
+    @Html.TextBoxFor(x => x.Description2, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>

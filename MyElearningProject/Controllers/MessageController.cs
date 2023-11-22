@@ -8,54 +8,55 @@ using System.Web.Mvc;
 
 namespace MyElearningProject.Controllers
 {
-    public class StudentController : Controller
+    public class MessageController : Controller
     {
+
         ELearningContext context = new ELearningContext();
 
         public ActionResult Index()
         {
-            TempData["Location"] = "Öğrenciler";
-            var values = context.Students.ToList();
+            TempData["Location"] = "Mesajlar";
+            var values = context.Messages.ToList();
             return View(values);
         }
 
         [HttpGet]
-        public ActionResult AddStudent()
+        public ActionResult AddMessage()
         {
             return View();
         }
 
         [HttpPost]
-        public ActionResult AddStudent(Student student)
+        public ActionResult AddMessage(Message message)
         {
-            context.Students.Add(student);
+            context.Messages.Add(message);
             context.SaveChanges();
             return RedirectToAction("Index");
         }
 
-        public ActionResult DeleteStudent(int id)
+        public ActionResult DeleteMessage(int id)
         {
-            var value = context.Students.Find(id);
-            context.Students.Remove(value);
+            var value = context.Messages.Find(id);
+            context.Messages.Remove(value);
             context.SaveChanges();
             return RedirectToAction("Index");
         }
 
         [HttpGet]
-        public ActionResult UpdateStudent(int id)
+        public ActionResult UpdateMessage(int id)
         {
-            var value = context.Students.Find(id);
+            var value = context.Messages.Find(id);
             return View(value);
         }
 
         [HttpPost]
-        public ActionResult UpdateStudent(Student student)
+        public ActionResult UpdateMessage(Message message)
         {
-            var value = context.Students.Find(student.StudentID);
-            value.Name = student.Name;
-            value.Surname = student.Surname;
-            value.Email = student.Email;
-            value.Password = student.Password;
+            var value = context.Messages.Find(message.MessageID);
+            value.NameSurname = message.NameSurname;
+            value.Email = message.Email;
+            value.Subject = message.Subject;
+            value.MessageDescription = message.MessageDescription;
             context.SaveChanges();
             return RedirectToAction("Index");
         }

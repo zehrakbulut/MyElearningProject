@@ -15,7 +15,7 @@ namespace MyElearningProject.Controllers
 
         public ActionResult Index()
         {
-            TempData["Location"] = "Refferance";
+            TempData["Location"] = "Referanslar";
             var values = context.Testimonials.ToList();
             return View(values);
         }

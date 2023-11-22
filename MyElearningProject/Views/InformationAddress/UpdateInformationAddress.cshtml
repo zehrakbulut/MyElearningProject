@@ -1,0 +1,25 @@
+﻿@model MyElearningProject.DAL.Entities.InformationAddress
+@{
+    ViewBag.Title = "UpdateInformationAddress";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>İletişim Güncelleme Sayfası</h2>
+
+<form method="post">
+    @Html.HiddenFor(x => x.InformationAddressID)
+    <br /><br />
+    @Html.TextBoxFor(x => x.Title1, new { @class = "form-control" })
+    <br /><br />
+    @Html.TextBoxFor(x => x.Address, new { @class = "form-control" })
+    <br /><br />
+    @Html.TextBoxFor(x => x.Title2, new { @class = "form-control" })
+    <br /><br />
+    @Html.TextBoxFor(x => x.Phone, new { @class = "form-control" })
+    <br /><br />
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn btn-primary">Güncelle</button>
+</form>
+
+

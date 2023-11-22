@@ -89,5 +89,11 @@ namespace MyElearningProject.Controllers
             }
             return View();
         }
+
+        public ActionResult LogOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Index", "Login");
+        }
     }
 }
