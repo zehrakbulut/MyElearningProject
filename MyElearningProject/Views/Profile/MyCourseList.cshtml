@@ -1,13 +1,30 @@
 ﻿@model List<MyElearningProject.DAL.Entities.Process>
-
 @{
-    Layout = null;
-    int count = 0;
+    ViewBag.Title = "MyCourseList";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
 }
 
-<h5>Kurs Listeniz</h5>
-@foreach (var item in Model)
-{
-    count++;
-    <p>@count - @item.Course.Title</p>
-}
+<h2>Kurslarım</h2>
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Başlık</th>
+        <th>Fiyat</th>
+        <th>Kategori</th>
+        <th>Eğitmen</th>
+    </tr>
+    @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.CourseID</td>
+                    <td>@item.Course.Title</td>
+                    <td>@item.Course.Price</td>
+                    <td>@item.Course.Category.CategoryName</td>
+                    <td>@item.Course.Instructor.Name @item.Course.Instructor.Surname</td>
+                    <td><a href="/Profile/WatchCourse/@item.CourseID" class="btn btn-outline-success">İzle</a></td>
+                    <td><a href="/Profile/ReviewCourse/@item.CourseID" class="btn btn-outline-success">Değerlendir</a></td>
+                </tr>
+            }
+</table>
+

@@ -1,0 +1,19 @@
+﻿@model List<MyElearningProject.DAL.Entities.CourseWatchList>
+@{
+    ViewBag.Title = "WatchCourse";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
+}
+
+<div class="container" style="width:100%; border:solid 1px #cdbdbd; height:600px; overflow:auto;">
+    <br />
+    <h2>@ViewBag.courseName</h2><hr />
+    <div class="container" style="height:450px; width:100%">
+        @foreach (var item in Model)
+        {
+            <div class="container" style="width:33%; float:left">
+                <iframe width="410" height="315" src="@item.VideoUrl" title="YouTube video player" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe><br />
+            </div>
+        }
+    </div>
+</div>

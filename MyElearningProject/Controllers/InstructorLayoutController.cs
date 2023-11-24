@@ -34,7 +34,12 @@ namespace MyElearningProject.Controllers
             return PartialView();
         }
 
-        public PartialViewResult PartialWrapper()
+        public PartialViewResult PartialRowPage()
+        {
+            return PartialView();
+        }
+
+        public PartialViewResult PartialFooter()
         {
             return PartialView();
         }

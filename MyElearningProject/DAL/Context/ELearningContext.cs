@@ -27,5 +27,6 @@ namespace MyElearningProject.DAL.Context
         public DbSet<Map> Maps { get; set; }
         public DbSet<Message> Messages { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<CourseWatchList> CourseWatchLists { get; set; }
     }
 }

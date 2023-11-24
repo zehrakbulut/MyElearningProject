@@ -43,7 +43,7 @@ namespace MyElearningProject.Controllers
             if (values != null)
             {
                 FormsAuthentication.SetAuthCookie(values.Email, false);
-                Session["CurrentMail"] = values.Name+" "+values.Surname;
+                Session["CurrentMail"] = values.Email;
                 Session.Timeout = 60;
                 return RedirectToAction("Index", "Profile");
             }

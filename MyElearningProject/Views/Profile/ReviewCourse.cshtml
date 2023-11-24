@@ -1,0 +1,46 @@
+﻿﻿@model MyElearningProject.DAL.Entities.Review
+@{
+    ViewBag.Title = "ReviewCourse";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
+}
+<!-- Değerlendirme yapıldığında gösterilecek uyarı mesajı -->
+@if (TempData["ReviewSuccess"] != null)
+{
+    <div class="alert alert-success" role="alert">
+        @TempData["ReviewSuccess"]
+    </div>
+}
+<div class="cont" style="border: solid 1px #cdbdbd; height: 250px; overflow: auto;">
+    <div class="stars" style="text-align:center">
+        <form method="post" action="@Url.Action("ReviewCourse", "Profile")">
+
+            <input type="hidden" name="courseId" value="@ViewBag.courseID" />
+
+            <input class="star star-10" id="star-10-2" type="radio" name="ReviewScore" value="10" />
+            <label class="star star-10" for="star-10-2">10</label>
+            <input class="star star-9" id="star-9-2" type="radio" name="ReviewScore" value="9" />
+            <label class="star star-9" for="star-9-2">9</label>
+            <input class="star star-8" id="star-8-2" type="radio" name="ReviewScore" value="8" />
+            <label class="star star-8" for="star-8-2">8</label>
+            <input class="star star-7" id="star-7-2" type="radio" name="ReviewScore" value="7" />
+            <label class="star star-7" for="star-7-2">7</label>
+            <input class="star star-6" id="star-6-2" type="radio" name="ReviewScore" value="6" />
+            <label class="star star-6" for="star-6-2">6</label>
+            <input class="star star-5" id="star-5-2" type="radio" name="ReviewScore" value="5" />
+            <label class="star star-5" for="star-5-2">5</label>
+            <input class="star star-4" id="star-4-2" type="radio" name="ReviewScore" value="4" />
+            <label class="star star-4" for="star-4-2">4</label>
+            <input class="star star-3" id="star-3-2" type="radio" name="ReviewScore" value="3" />
+            <label class="star star-3" for="star-3-2">3</label>
+            <input class="star star-2" id="star-2-2" type="radio" name="ReviewScore" value="2" />
+            <label class="star star-2" for="star-2-2">2</label>
+            <input class="star star-1" id="star-1-2" type="radio" name="ReviewScore" value="1" />
+            <label class="star star-1" for="star-1-2">1</label>
+            <br />
+            <div class="">
+                <textarea class="review" name="CommentText" style="text-align:center" placeholder="Yorumunuzu buraya yazın"></textarea>
+                <button class="btn btn-warning" type="submit">Gönder</button>
+            </div>
+        </form>
+    </div>
+</div>

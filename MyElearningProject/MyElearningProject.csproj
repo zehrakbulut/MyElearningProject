@@ -132,6 +132,7 @@
     <Compile Include="Controllers\InformationAddressController.cs" />
     <Compile Include="Controllers\InstructorLayoutController.cs" />
     <Compile Include="Controllers\ContactMapController.cs" />
+    <Compile Include="Controllers\InstructorProfileController.cs" />
     <Compile Include="Controllers\MessageController.cs" />
     <Compile Include="Controllers\StudentLayoutController.cs" />
     <Compile Include="Controllers\UIAboutController.cs" />
@@ -157,6 +158,7 @@
     <Compile Include="DAL\Entities\Comment.cs" />
     <Compile Include="DAL\Entities\Course.cs" />
     <Compile Include="DAL\Entities\CourseRegister.cs" />
+    <Compile Include="DAL\Entities\CourseWatchList.cs" />
     <Compile Include="DAL\Entities\Feature.cs" />
     <Compile Include="DAL\Entities\Information.cs" />
     <Compile Include="DAL\Entities\InformationAddress.cs" />
@@ -251,7 +253,12 @@
     <Compile Include="Migrations\202311131050019_mig_add_admin.designer.cs">
       <DependentUpon>202311131050019_mig_add_admin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202311241601239_mig_add_coursewatchlist.cs" />
+    <Compile Include="Migrations\202311241601239_mig_add_coursewatchlist.designer.cs">
+      <DependentUpon>202311241601239_mig_add_coursewatchlist.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\ReviewCommentViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -720,6 +727,8 @@
     <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-time.css" />
     <Content Include="Templates\material-lite-master\scss\icons\weather-icons\less\css\variables-wind-names.css" />
     <Content Include="Templates\material-lite-master\table-basic.html" />
+    <Content Include="Templates\starDocuments\css.css" />
+    <Content Include="Templates\starDocuments\js.js" />
     <Content Include="Templates\web\css\font-awesome.css" />
     <Content Include="Templates\web\css\style.css" />
     <Content Include="Templates\web\images\bg.jpg" />
@@ -982,12 +991,7 @@
     <Content Include="Views\Course\Index.cshtml" />
     <Content Include="Views\Course\CreateCourse.cshtml" />
     <Content Include="Views\Course\UpdateCourse.cshtml" />
-    <Content Include="Views\InstructorAnalysis\Index.cshtml" />
-    <Content Include="Views\InstructorAnalysis\InstructorPanelPartial.cshtml" />
-    <Content Include="Views\InstructorAnalysis\CommentPartial.cshtml" />
-    <Content Include="Views\InstructorAnalysis\CourseListByInstructor.cshtml" />
     <Content Include="Views\Profile\Index.cshtml" />
-    <Content Include="Views\Profile\MyCourseList.cshtml" />
     <Content Include="Views\Testimonial\AddTestimonial.cshtml" />
     <Content Include="Views\Testimonial\Index.cshtml" />
     <Content Include="Views\Testimonial\UpdateTestimonial.cshtml" />
@@ -1115,13 +1119,6 @@
     <Content Include="Templates\web\fonts\fontawesome-webfont.woff" />
     <Content Include="Templates\web\fonts\fontawesome-webfont.woff2" />
     <Content Include="Templates\web\fonts\FontAwesome.otf" />
-    <Content Include="Views\InstructorLayout\Index.cshtml" />
-    <Content Include="Views\InstructorLayout\PartialHead.cshtml" />
-    <Content Include="Views\InstructorLayout\PartialPreloader.cshtml" />
-    <Content Include="Views\InstructorLayout\PartialHeader.cshtml" />
-    <Content Include="Views\InstructorLayout\PartialSidebar.cshtml" />
-    <Content Include="Views\InstructorLayout\PartialWrapper.cshtml" />
-    <Content Include="Views\InstructorLayout\PartialScript.cshtml" />
     <Content Include="Views\ContactMap\Index.cshtml" />
     <Content Include="Views\ContactMap\AddMap.cshtml" />
     <Content Include="Views\ContactMap\UpdateMap.cshtml" />
@@ -1148,11 +1145,24 @@
     <Content Include="Views\Profile\StudentInformationPartial.cshtml" />
     <Content Include="Views\Profile\StudentActivityPartial.cshtml" />
     <Content Include="Views\Profile\StudentProfilePartial.cshtml" />
-    <Content Include="Views\Profile\StudentSettingsPartial.cshtml" />
+    <Content Include="Views\Profile\MyCourseList.cshtml" />
+    <Content Include="Views\Profile\WatchCourse.cshtml" />
+    <Content Include="Views\Profile\ReviewCourse.cshtml" />
+    <Content Include="Views\Profile\StudentCourseBuy.cshtml" />
+    <Content Include="Views\InstructorLayout\Index.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialHead.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialPreloader.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialHeader.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialSidebar.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialWrapper.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialRowPage.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialFooter.cshtml" />
+    <Content Include="Views\InstructorLayout\PartialScript.cshtml" />
+    <Content Include="Views\InstructorAnalysis\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
+    <Folder Include="Views\InstructorProfile\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff2" />
@@ -1227,6 +1237,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202311131050019_mig_add_admin.resx">
       <DependentUpon>202311131050019_mig_add_admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311241601239_mig_add_coursewatchlist.resx">
+      <DependentUpon>202311241601239_mig_add_coursewatchlist.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

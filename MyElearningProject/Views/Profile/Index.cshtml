@@ -1,4 +1,4 @@
-﻿
+﻿﻿@model MyElearningProject.DAL.Entities.Student
 @{
     Layout = "~/Views/StudentLayout/Index.cshtml"; ;
 }
@@ -7,9 +7,9 @@
     <!-- Column -->
     <div class="col-lg-4 col-xlg-3 col-md-5">
         <!-- Column -->
-        @Html.Action("StudentInformationPartial","Profile")
+        @Html.Action("StudentInformationPartial", "Profile")
         <!-- Column -->
-        
+
     </div>
     <div class="col-lg-8 col-xlg-9 col-md-7">
         <div class="card">
@@ -23,8 +23,51 @@
             <div class="tab-content">
                 @Html.Action("StudentActivityPartial", "Profile")
                 <!--second tab-->
-                @Html.Action("StudentProfilePartial","Profile")
-                @Html.Action("StudentSettingsPartial","Profile")
+                @Html.Action("StudentProfilePartial", "Profile")
+
+
+
+                <div class="tab-pane" id="settings" role="tabpanel">
+                    <div class="card-block">
+                        <form class="form-horizontal form-material" method="post">
+                            @Html.HiddenFor(x => x.StudentID)
+                            <div class="form-group">
+                                <label class="col-md-12">Ad</label>
+                                <div class="col-md-12">
+                                    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Soyad</label>
+                                <div class="col-md-12">
+                                    @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-12">Mail</label>
+                                <div class="col-md-12">
+                                    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+                                </div>
+                            </div><div class="form-group">
+                                <label class="col-md-12">Password</label>
+                                <div class="col-md-12">
+                                    @Html.TextBoxFor(x => x.Password, new { @class = "form-control", @type = "password", @id = "passwordField" })
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="checkbox" onclick="togglePasswordVisibility()" id="showPasswordCheckbox">
+                                        <label class="form-check-label" style="font-size:15px" for="showPasswordCheckbox">Show Password</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-sm-12">
+                                    <button class="btn btn-success">Güncelle</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+
             </div>
         </div>
     </div>

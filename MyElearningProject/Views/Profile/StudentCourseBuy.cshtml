@@ -1,0 +1,36 @@
+﻿@model List<MyElearningProject.DAL.Entities.Course>
+@{
+    ViewBag.Title = "StudentCourseBuy";
+    Layout = "~/Views/StudentLayout/Index.cshtml";
+}
+
+<div class="container" style="width: 100%; border: solid 1px #cdbdbd; height: 600px; overflow: auto;">
+    <br />
+    <h2>Kurslar</h2><hr />
+
+    <div class="container">
+        @if (TempData["Message"] != null)
+        {
+            <div class="alert alert-primary bg-light-primary" style="text-align:center" role="alert">
+                @TempData["Message"]
+            </div>
+        }
+    </div>
+
+    <div class="container" style="height: 450px; width:100%">
+        @using (Html.BeginForm("StudentCourseBuy", "Profile", FormMethod.Post))
+        {
+            foreach (var item in Model)
+            {
+                <div class="container" style="width: 33%; float: left">
+                    <form action="@Url.Action("StudentCourseBuy", "Profile")" method="post">
+                        <input type="hidden" name="CourseID" value="@item.CourseID" />
+                        <img src="@item.ImageUrl" alt="Course Image" style="width:350px; object-fit: cover;" />
+                        <div class="container" style="text-align:center">@item.Title</div>
+                        <button type="submit" class="btn btn-outline-success" style="width:100%">Kursu Ekle</button><br /><br />
+                    </form>
+                </div>
+            }
+        }
+    </div>
+</div>

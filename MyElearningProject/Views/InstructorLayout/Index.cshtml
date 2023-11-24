@@ -3,49 +3,42 @@
     Layout = null;
 }
 
-<html>
-@Html.Action("PartialHead","InstructorLayout")
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("PartialHead", "InstructorLayout")
 
 <body class="fix-header fix-sidebar card-no-border">
-    <!-- ============================================================== -->
-    <!-- Preloader - style you can find in spinners.css -->
-    <!-- ============================================================== -->
-    @Html.Action("PartialPreloader","InstructorLayout")
-    <!-- ============================================================== -->
-    <!-- Main wrapper - style you can find in pages.scss -->
-    <!-- ============================================================== -->
+
+    @Html.Action("PartialPreloader", "InstructorLayout")
+
     <div id="main-wrapper">
-        <!-- ============================================================== -->
-        <!-- Topbar header - style you can find in pages.scss -->
-        <!-- ============================================================== -->
+
         @Html.Action("PartialHeader", "InstructorLayout")
-        <!-- ============================================================== -->
-        <!-- End Topbar header -->
-        <!-- ============================================================== -->
-        <!-- ============================================================== -->
-        <!-- Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ============================================================== -->
+
         @Html.Action("PartialSidebar", "InstructorLayout")
-        <!-- ============================================================== -->
-        <!-- End Left Sidebar - style you can find in sidebar.scss  -->
-        <!-- ==============   <h5>yukeeeemmmm</h5>================================================ -->
-        <!-- ============================================================== -->
-        <!-- Page wrapper  -->
-        <!-- ============================================================== -->
-        @Html.Action("PartialWrapper", "InstructorLayout")
 
+        <div class="page-wrapper">
+            <div class="container-fluid">
+                @Html.Action("PartialRowPage", "InstructorLayout")
+                <div class="row">
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-block">
+                                @RenderBody()
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
-        <!-- ============================================================== -->
-        <!-- End Page wrapper  -->
-        <!-- ============================================================== -->
+            @Html.Action("PartialFooter", "InstructorLayout")
+
+        </div>
+
     </div>
-    <!-- ============================================================== -->
-    <!-- End Wrapper -->
-    <!-- ============================================================== -->
-    <!-- ============================================================== -->
-    <!-- All Jquery -->
-    <!-- ============================================================== -->
-    @Html.Action("PartialScript","InstructorLayout")
+
+    @Html.Action("PartialScript", "InstructorLayout")
 </body>
 
 </html>
