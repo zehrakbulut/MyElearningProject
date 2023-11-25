@@ -118,8 +118,8 @@ Proje, ASP.NET Framework, SQL Server, MVC, Bootstrap, CSS, ve HTML kullanılarak
 ![Ekran görüntüsü 2023-11-26 022815](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/34a5936e-bd7f-4b42-9d39-55236944ab3c)
 ![Ekran görüntüsü 2023-11-26 022850](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/47a81732-8598-45a5-ad13-f49f375a3862)
 ![Ekran görüntüsü 2023-11-26 022909](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/713f0acf-ff38-42cb-9ae0-92c84ab69e5a)
-![Uploading Ekran görüntüsü 2023-11-26 023019.png…]()
-![Uploading Ekran görüntüsü 2023-11-26 023038.png…]()
+![Ekran görüntüsü 2023-11-26 023739](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/004cbbfe-af36-419d-92ff-c750e96494b4)
+![Ekran görüntüsü 2023-11-26 023038](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/554a1499-2e64-4524-aad2-73fc1bd1095e)
 
 
 ## Nasıl Başlanır
