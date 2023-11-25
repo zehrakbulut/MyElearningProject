@@ -1,4 +1,4 @@
-![Ekran görüntüsü 2023-11-26 020432](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/df31aaa4-df34-4ea5-8fb9-6b7d85599d9a)![Ekran görüntüsü 2023-11-26 020354](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/d4cb15a1-5121-470a-9e86-6b9e9f95e11c)# MyElearningProject
+# MyElearningProject
 # M&Y Yazılım Eğitim Akademi - ELearningProject
 
 Bu repository, M&Y Yazılım Eğitim Akademi Danışmanlık bünyesinde gerçekleştirilen Full Stack .Net Development eğitimi kapsamındaki projeyi içermektedir.
