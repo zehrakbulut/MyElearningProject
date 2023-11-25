@@ -1,4 +1,4 @@
-# MyElearningProject
+![Ekran görüntüsü 2023-11-26 020432](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/df31aaa4-df34-4ea5-8fb9-6b7d85599d9a)![Ekran görüntüsü 2023-11-26 020354](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/d4cb15a1-5121-470a-9e86-6b9e9f95e11c)# MyElearningProject
 # M&Y Yazılım Eğitim Akademi - ELearningProject
 
 Bu repository, M&Y Yazılım Eğitim Akademi Danışmanlık bünyesinde gerçekleştirilen Full Stack .Net Development eğitimi kapsamındaki projeyi içermektedir.
@@ -84,6 +84,12 @@ Proje, ASP.NET Framework, SQL Server, MVC, Bootstrap, CSS, ve HTML kullanılarak
 ![Ekran görüntüsü 2023-11-26 015820](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/9e4b61ad-ee90-4a33-bcaf-ac27892d6775)
 ![Ekran görüntüsü 2023-11-26 015842](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/d1094f21-e353-472e-889f-8b00042d00fe)
 
+
+# HAKKIMIZDA
+![Ekran görüntüsü 2023-11-26 020354](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/055ba88d-b73b-42ac-b23e-963c2198028b)
+![Ekran görüntüsü 2023-11-26 020410](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/452174fc-9c21-4ee7-8514-a81cb707d601)
+![Ekran görüntüsü 2023-11-26 020432](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/5103c1a1-26e6-46a5-9396-bd364563dd90)
+![Ekran görüntüsü 2023-11-26 020446](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/5701f3f9-c5e1-4224-a862-cd7bbb54cf9b)
 
 ## Nasıl Başlanır
 
