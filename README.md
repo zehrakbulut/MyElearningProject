@@ -70,7 +70,7 @@ Proje, ASP.NET Framework, SQL Server, MVC, Bootstrap, CSS, ve HTML kullanılarak
 
 
 # İLİŞKİSEL VERİTABANI DİAGRAMI
-![Ekran görüntüsü 2023-11-26 014552](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/eb5adc0c-61fc-409f-aa79-05d3ff57e0a2)
+![Ekran görüntüsü 2023-11-26 022225](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/4731afa8-43b1-4ae6-b8b6-b1e1f7afc39d)
 
 
 # ANASAYFA
