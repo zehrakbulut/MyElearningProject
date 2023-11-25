@@ -122,6 +122,21 @@ Proje, ASP.NET Framework, SQL Server, MVC, Bootstrap, CSS, ve HTML kullanılarak
 ![Ekran görüntüsü 2023-11-26 023038](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/554a1499-2e64-4524-aad2-73fc1bd1095e)
 
 
+# ÖĞRENCİ
+![Ekran görüntüsü 2023-11-26 023904](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/aab4e772-fce8-4d28-9ff3-45f8378fdb2b)
+![Ekran görüntüsü 2023-11-26 024013](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/bb2646c4-3412-4f36-a5d3-0fbf6f6e1b9e)
+![Ekran görüntüsü 2023-11-26 024034](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/a9e0f6b1-3a99-46bf-b651-fc49492c67bf)
+![Ekran görüntüsü 2023-11-26 024049](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/0d387489-40a9-4891-889c-6dc2bcf23551)
+![Ekran görüntüsü 2023-11-26 024107](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/abc93ad3-8a47-468c-947e-d65050b7843f)
+![Ekran görüntüsü 2023-11-26 024128](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/92278957-b988-4074-9869-d0f891b25b54)
+![Ekran görüntüsü 2023-11-26 024214](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/be684d66-b5f9-447e-874a-3ded195f72ef)
+![Ekran görüntüsü 2023-11-26 024232](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/82af013a-7b00-44ac-9764-aa5d708de628)
+![Ekran görüntüsü 2023-11-26 024257](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/71529eec-db49-42bd-884d-5b866ef0aa24)
+![Ekran görüntüsü 2023-11-26 024314](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/31732a3c-db55-446f-b997-619595de6214)
+![Ekran görüntüsü 2023-11-26 024347](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/ac081ee3-6c70-44ab-8722-d4226ff6851f)
+
+
+
 ## Nasıl Başlanır
 
 1. Repository'yi klonlayın.
