@@ -1,5 +1,4 @@
-# MyElearningProject
-# M&Y Yazılım Eğitim Akademi - ELearningProject
+# M&Y Yazılım Eğitim Akademi - MyElearningProject
 
 Bu repository, M&Y Yazılım Eğitim Akademi Danışmanlık bünyesinde gerçekleştirilen Full Stack .Net Development eğitimi kapsamındaki projeyi içermektedir.
 
@@ -134,6 +133,22 @@ Proje, ASP.NET Framework, SQL Server, MVC, Bootstrap, CSS, ve HTML kullanılarak
 ![Ekran görüntüsü 2023-11-26 024257](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/71529eec-db49-42bd-884d-5b866ef0aa24)
 ![Ekran görüntüsü 2023-11-26 024314](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/31732a3c-db55-446f-b997-619595de6214)
 ![Ekran görüntüsü 2023-11-26 024347](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/ac081ee3-6c70-44ab-8722-d4226ff6851f)
+
+
+# ADMİN
+![Ekran görüntüsü 2023-11-26 024655](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/531d1e30-f3d7-4899-ad7d-32d4daa2b8fb)
+![Ekran görüntüsü 2023-11-26 024723](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/70ea5334-fed0-4e24-b408-4a1a3b07d4dd)
+![Ekran görüntüsü 2023-11-26 024802](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/1e861db5-6e39-40fb-8f46-280254400c14)
+![Ekran görüntüsü 2023-11-26 024830](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/331791e7-6c3d-4ab8-9d6a-726218c84782)
+![Ekran görüntüsü 2023-11-26 024856](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/d7c85085-f4bb-4916-af79-b04a42a1dae9)
+![Ekran görüntüsü 2023-11-26 025025](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/f42887ad-87ce-49f2-99c1-a661816723c0)
+![Ekran görüntüsü 2023-11-26 025107](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/0de81655-476f-4510-a1e0-44ed7e5a6e7d)
+![Ekran görüntüsü 2023-11-26 025134](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/89046486-e81a-42d6-97d2-29d5a1fc10d3)
+![Ekran görüntüsü 2023-11-26 025150](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/0f6f25cb-2945-4737-a89c-874bc117c9df)
+![Ekran görüntüsü 2023-11-26 025207](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/5cd74089-8f4a-402b-bff7-241732611c89)
+![Ekran görüntüsü 2023-11-26 025223](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/02e9c99b-e6e5-437e-a977-15e00ca789b3)
+![Ekran görüntüsü 2023-11-26 025236](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/739fc692-4033-4c4f-9f03-0ec3476aa7ca)
+![Ekran görüntüsü 2023-11-26 025250](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/03918c22-e236-4875-816d-8ba5dfb7efa3)
 
 
 
