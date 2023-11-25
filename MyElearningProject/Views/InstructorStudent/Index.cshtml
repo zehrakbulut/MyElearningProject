@@ -1,0 +1,23 @@
+﻿@model List<MyElearningProject.DAL.Entities.CourseRegister>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/InstructorLayout/Index.cshtml";
+}
+
+<table class="table table-bordered">
+    <tr>
+        <th>#</th>
+        <th>Ad Soyad</th>
+        <th>Mail</th>
+        <th>Kurs Adı</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.CourseRegisterID</td>
+            <td>@item.Student.Name @item.Student.Surname</td>
+            <td>@item.Student.Email</td>
+            <td>@item.Course.Title</td>
+        </tr>
+    }
+</table>

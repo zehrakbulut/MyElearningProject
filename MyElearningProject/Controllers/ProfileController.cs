@@ -17,6 +17,7 @@ namespace MyElearningProject.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+            TempData["Location"] = "Profil";
             string values = Session["CurrentMail"].ToString();
             ViewBag.mail = Session["CurrentMail"];
             ViewBag.name = context.Students.Where(x => x.Email == values).Select(y => y.Name + " " + y.Surname).FirstOrDefault();
@@ -54,7 +55,7 @@ namespace MyElearningProject.Controllers
         }
 
         [HttpGet]
-        public ActionResult ReviewCourse(int id)
+        public ActionResult ReviewCourse(int id)    
         {
             TempData["Location"] = "Değerlendirme";
             ViewBag.courseID = id;
@@ -114,8 +115,8 @@ namespace MyElearningProject.Controllers
         [HttpGet]
         public ActionResult StudentCourseBuy()
         {
-            TempData["Location"] = "Kursalar";
-            var values = context.Courses.ToList();
+            TempData["Location"] = "Kurslar";
+            var values = context.Courses.ToList();  
             return View(values);
         }
 

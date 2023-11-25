@@ -1,0 +1,25 @@
+﻿@model List<MyElearningProject.DAL.Entities.Instructor>
+
+@foreach (var item in Model)
+{
+    <div class="card">
+        <img class="card-img-top" src="@item.CoverImage" alt="Card image cap">
+        <div class="card-block little-profile text-center">
+            <div class="pro-img"><img src="@item.ImageUrl" alt="user" /></div>
+            <h3 class="m-b-0">@item.Name @item.Surname </h3>
+            <p>@item.Title</p>
+            <div class="row text-center m-t-20">
+                <div class="col-lg-4 col-md-4 m-t-20">
+                    <h3 class="m-b-0 font-light"> @ViewBag.courseCount </h3><small>Kurs</small>
+                </div>
+                <div class="col-lg-4 col-md-4 m-t-20">
+                    <h3 class="m-b-0 font-light">@ViewBag.commentCount</h3><small>Yorum</small>
+                </div>
+                <div class="col-lg-4 col-md-4 m-t-20">
+                    <h3 class="m-b-0 font-light">@ViewBag.averageCourseReview</h3><small>Puan</small>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
