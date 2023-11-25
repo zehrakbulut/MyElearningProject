@@ -102,8 +102,11 @@ Proje, ASP.NET Framework, SQL Server, MVC, Bootstrap, CSS, ve HTML kullanılarak
 
 
 # İLETİŞİM
-![Ekran görüntüsü 2023-11-26 021228](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/caafb878-f428-4ef9-af2d-2db3fc484d60)
-![Ekran görüntüsü 2023-11-26 021242](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/a37dd362-c101-4966-bc1b-83ba36002147)
+![Ekran görüntüsü 2023-11-26 021622](https://github.com/zehrakbulut/MyElearningProject/assets/103004228/274293fa-0b59-4818-89ab-62782d121e2d)
+
+
+# GİRİŞ YAP
+![Uploading Ekran görüntüsü 2023-11-26 021743.png…]()
 
 
 
