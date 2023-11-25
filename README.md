@@ -110,6 +110,8 @@ Proje, ASP.NET Framework, SQL Server, MVC, Bootstrap, CSS, ve HTML kullanılarak
 
 
 
+
+
 ## Nasıl Başlanır
 
 1. Repository'yi klonlayın.
